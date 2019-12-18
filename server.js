@@ -14,11 +14,11 @@ const db = knex({
   client: 'pg',
   connection: {
     // host: keys.databaseURL,
+    // user: '<YOUR LOCAL USER NAME>',
+    // password: '',
+    // database: '<YOUR LOCAL DATABASE NAME>',
     connectionString: keys.databaseURL,
-    ssl: true,
-    user: 'markchanner',
-    password: '',
-    database: 'smart-brain'
+    ssl: true
   }
 });
 
