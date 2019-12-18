@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
 
+const keys = require('./config/keys');
 const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
@@ -12,7 +13,8 @@ const image = require('./controllers/image');
 const db = knex({
   client: 'pg',
   connection: {
-    host: 'postgresql-animated-82533',
+    host: keys.databaseURL,
+    ssl: true,
     user: 'markchanner',
     password: '',
     database: 'smart-brain'
