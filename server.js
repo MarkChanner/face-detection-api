@@ -24,12 +24,12 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post('/signin', (req, res) => {
-  signin.handleSignin(req, res, bcrypt, db);
-});
-
 app.post('/register', (req, res) => {
   register.handleRegister(req, res, bcrypt, db);
+});
+
+app.post('/signin', (req, res) => {
+  signin.handleSignin(req, res, bcrypt, db);
 });
 
 app.get('/profile/:id', (req, res) => {
