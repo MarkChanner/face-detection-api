@@ -1,5 +1,5 @@
 const Clarifai = require('clarifai');
-const keys = require('../config/dev');
+const keys = require('../config/keys');
 
 const app = new Clarifai.App({
   apiKey: keys.clarifaiAPI
